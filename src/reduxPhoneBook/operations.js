@@ -6,7 +6,7 @@ axios.defaults.baseURL = baseUrl;
 
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
-  async (payload, thunkAPI) => {
+  async (_, thunkAPI) => {
     try {
       const { data } = await axios('/contacts');
       return data;
